@@ -1,0 +1,19 @@
+seeds:
+  - name: abc
+    config:
+      column_types:
+        zipcode: varchar
+        name: varchar
+  - name: countrylist
+    config:
+      column_types:
+        code: varchar
+        name: varchar
+        city: varchar
+        addnewcolumn: varchar
+  - name: psvtable
+    config:
+      delimiter: "|"
+      column_types:
+        id: number
+        name: varchar

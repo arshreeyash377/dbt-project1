@@ -1,0 +1,84 @@
+--DQ staged - Completeness
+select 
+'Orders_DQ' AS ordertbl,
+'Row_ID' AS attribute,
+sum(case WHEN Row_ID IS NULL THEN 1 ELSE 0 END) AS count_null_records
+from RAW.public.Orders_DQ
+union all 
+select 
+'Orders_DQ',
+'Order_ID',
+sum(case WHEN Order_ID IS NULL THEN 1 ELSE 0 END)
+from RAW.public.Orders_DQ
+union all 
+select 
+'Orders_DQ',
+'Order_Date',
+sum(case WHEN Order_Date IS NULL THEN 1 ELSE 0 END)
+from RAW.public.Orders_DQ
+union all 
+select 
+'Orders_DQ',
+'Order_Priority',
+sum(case WHEN Order_Priority IS NULL THEN 1 ELSE 0 END)
+from RAW.public.Orders_DQ
+union all 
+select 
+'Orders_DQ',
+'Order_Quantity',
+sum(case WHEN Order_Quantity IS NULL THEN 1 ELSE 0 END)
+from RAW.public.Orders_DQ
+union all 
+select 
+'Orders_DQ',
+'Sales',
+sum(case WHEN Sales IS NULL THEN 1 ELSE 0 END)
+from RAW.public.Orders_DQ
+union all 
+select 
+'Orders_DQ',
+'Discount',
+sum(case WHEN Discount IS NULL THEN 1 ELSE 0 END)
+from RAW.public.Orders_DQ
+union all 
+select 
+'Orders_DQ',
+'Ship_Mode',
+sum(case WHEN Ship_Mode IS NULL THEN 1 ELSE 0 END)
+from RAW.public.Orders_DQ
+union all 
+select 
+'Orders_DQ',
+'Profit',
+sum(case WHEN Profit IS NULL THEN 1 ELSE 0 END)
+from RAW.public.Orders_DQ
+union all 
+select 
+'Orders_DQ',
+'Unit_Price',
+sum(case WHEN Unit_Price IS NULL THEN 1 ELSE 0 END)
+from RAW.public.Orders_DQ
+union all 
+select 
+'Orders_DQ',
+'Shipping_Cost',
+sum(case WHEN Shipping_Cost IS NULL THEN 1 ELSE 0 END)
+from RAW.public.Orders_DQ
+union all 
+select 
+'Orders_DQ',
+'Customer_Name',
+sum(case WHEN Customer_Name IS NULL THEN 1 ELSE 0 END)
+from RAW.public.Orders_DQ
+union all 
+select 
+'Orders_DQ',
+'Product_Name',
+sum(case WHEN Product_Name IS NULL THEN 1 ELSE 0 END)
+from  RAW.public.Orders_DQ
+union all 
+select 
+'Orders_DQ',
+'Ship_Date',
+sum(case WHEN Ship_Date IS NULL THEN 1 ELSE 0 END)
+from RAW.public.Orders_DQ

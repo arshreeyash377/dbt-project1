@@ -7,3 +7,4 @@
 
 }}
 Select * from raw.globalmart.customers
+
